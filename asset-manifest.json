@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/math-gen/static/css/main.bde16de2.css",
-    "main.js": "/math-gen/static/js/main.08cead96.js",
+    "main.js": "/math-gen/static/js/main.cc105a94.js",
     "static/js/453.9decb586.chunk.js": "/math-gen/static/js/453.9decb586.chunk.js",
     "index.html": "/math-gen/index.html",
     "main.bde16de2.css.map": "/math-gen/static/css/main.bde16de2.css.map",
-    "main.08cead96.js.map": "/math-gen/static/js/main.08cead96.js.map",
+    "main.cc105a94.js.map": "/math-gen/static/js/main.cc105a94.js.map",
     "453.9decb586.chunk.js.map": "/math-gen/static/js/453.9decb586.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.bde16de2.css",
-    "static/js/main.08cead96.js"
+    "static/js/main.cc105a94.js"
   ]
 }
