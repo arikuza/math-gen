@@ -28,10 +28,20 @@ function generateMathExamples(
   let num1, num2, operation, example;
 
   while (result < 0) {
-    const max1 = Math.pow(10, digits1) - 1;
-    const min1 = Math.pow(10, digits1 - 1);
-    const max2 = Math.pow(10, digits2) - 1;
-    const min2 = Math.pow(10, digits2 - 1);
+    let max1, min1, max2, min2;
+    if (operations.includes("*")) {
+      // Для умножения устанавливаем специфические границы
+      max1 = 5; // Максимум для первого множителя
+      min1 = 2; // Минимум для первого множителя
+      max2 = 9; // Максимум для второго множителя
+      min2 = 2; // Минимум для второго множителя
+    } else {
+      // Для других операций используем стандартные границы
+      max1 = Math.pow(10, digits1) - 1;
+      min1 = Math.pow(10, digits1 - 1);
+      max2 = Math.pow(10, digits2) - 1;
+      min2 = Math.pow(10, digits2 - 1);
+    }
     num1 = Math.floor(Math.random() * (max1 - min1 + 1)) + min1;
     num2 = Math.floor(Math.random() * (max2 - min2 + 1)) + min2;
     operation = operations[Math.floor(Math.random() * operations.length)];
