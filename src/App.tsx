@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import logo from "./logo.svg";
 import "./App.css";
 
-const MAX_EXAMPLES = 1;
+const MAX_EXAMPLES = 50;
 
 const DEFAULT_OPERATIONS = ["-", "+"];
 
@@ -101,7 +101,6 @@ function App() {
 
   const restart = () => {
     setCorrectCount(0);
-    setErrorCount(0);
     setUserInput("");
   };
 
@@ -181,7 +180,7 @@ function App() {
       {/* Клавиатура */}
       {isOver ? null : (
         <>
-          <div className="flex flex-col items-center mt-auto max-w-xl mb-4">
+          <div className="flex flex-col items-center mt-auto max-w-xl mb-4 ml-auto mr-auto">
             <div className="flex flex-wrap justify-center">
               {[1, 2, 3, 4, 5, 6, 7, 8, 9].map((num) => (
                 <button
@@ -208,15 +207,15 @@ function App() {
               >
                 0
               </button>
-              <div style={{ width: "25%" }}></div>
+              <button
+                onClick={handleSubmit}
+                className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-1 rounded m-1"
+                style={{ width: "25%" }}
+              >
+                Ответить
+              </button>
             </div>
           </div>
-          <button
-            onClick={handleSubmit}
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mb-4 mx-8"
-          >
-            Проверить
-          </button>
         </>
       )}
     </div>
